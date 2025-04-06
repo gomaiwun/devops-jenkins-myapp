@@ -1,0 +1,39 @@
+# Maven
+target/
+*.jar
+*.war
+*.zip
+*.tar.gz
+
+# IDE specific files
+.idea/
+*.iml
+*.class
+*.log
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Node.js (in case of using Node.js packages for front-end)
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Docker files
+.dockerignore
+Dockerfile
+docker-compose.yml
+
+# Java specific
+*.class
+*.global.prefs
+*.userprefs
+*.project
+*.classpath
+
+# Other files
+*.log
+*.lock
+*.swp
+*.swo
