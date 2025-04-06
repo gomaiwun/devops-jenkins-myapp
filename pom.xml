@@ -9,25 +9,25 @@
 
     <properties>
         <java.version>11</java.version>
-        <spring.boot.version>2.5.4</spring.boot.version> <!-- Specify the Spring Boot version -->
+        <spring.boot.version>2.5.4</spring.boot.version> <!-- Specify Spring Boot version -->
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <version>${spring.boot.version}</version> <!-- Use property for version -->
+            <version>${spring.boot.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
-            <version>${spring.boot.version}</version> <!-- Use property for version -->
+            <version>${spring.boot.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.8.1</version>
-            <scope>test</scope>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId> <!-- Added Spring Boot test starter -->
+            <version>${spring.boot.version}</version>
+            <scope>test</scope> <!-- Set scope to test -->
         </dependency>
     </dependencies>
 
@@ -36,7 +36,16 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>${spring.boot.version}</version> <!-- Specify the version -->
+                <version>${spring.boot.version}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version> <!-- Add a proper Maven Compiler Plugin version -->
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
             </plugin>
         </plugins>
     </build>
